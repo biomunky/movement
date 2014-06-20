@@ -22,6 +22,7 @@ class MovementServlet()(implicit system: ActorSystem) extends MovementStack {
   val workerId = UUID.randomUUID.toString
   val streamName = "serverside_stream_live"
   val credentials = new BasicAWSCredentialsProvider("accessKey", "secretKey")
+
   val kinesisClientLibConfiguration = new KinesisClientLibConfiguration(
     appName,
     streamName,

@@ -35,7 +35,7 @@ class DefaultProcessor(fn: String => Unit) extends IRecordProcessor {
     for (record <- records) {
       val recordData = record.getData
       val decoded = decoder.decode(recordData).toString
-      log.debug("Calling fn(decoded)");
+      log.debug("Calling fn(decoded)")
       fn(decoded)
     }
   }
